@@ -14,11 +14,12 @@ variable "github_token" {
 
 variable "github_repo" {
   type    = string
-  default = "devops-academy-capstone"
+  default = "DevOps-Capstone"
 }
 
 variable "github_user" {
   type = string
+  default = "codingwithjess"
 }
 
 variable "access_key" {
