@@ -19,7 +19,7 @@ variable "github_repo" {
 
 variable "github_user" {
   type = string
-  default = "codingwithjess"
+  default = "codingwithjess2"
 }
 
 variable "access_key" {
