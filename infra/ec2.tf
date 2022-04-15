@@ -15,7 +15,13 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "backend_server" {
   #checkov:skip=CKV_AWS_88:Allow public IP for ssh access deploy since we don't have access to private GH Actions runners
   depends_on = [aws_route_table.main]
+  ami = data.aws_ami.ubuntu
+  instance_type = "t3.micro"
+  count = 3
+
 
   tags = var.aws_tags
 }
+
+
 
